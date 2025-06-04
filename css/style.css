@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;600;800&display=swap');
+
+:root {
+    --green: #27ae60;
+    --black: #2c3e50;
+    --grey: #ecf0f1;
+    --white: #ffffff;
+    --header-bg: #2c3e50; /* Dark background for table header */
+    --header-text: #ffffff; /* White text color for header */
+    --body-bg: #ecf0f1; /* Light background for table rows */
+}
+
+* {
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+body {
+    display: flex;
+    background-color: var(--grey);
+    min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background: var(--black);
+    color: var(--white);
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    color: var(--white);
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar a:hover {
+    background: var(--green);
+}
+
+/* Content Styling */
+.content {
+    margin-left: 250px; /* Sidebar width */
+    padding: 30px;
+    width: calc(100% - 250px); /* Adjust content width based on sidebar */
+    height: 100vh; /* Ensure content occupies full vertical space */
+    overflow-y: auto; /* To handle overflow of content if it exceeds the viewport */
+}
+
+.content-header {
+    background: var(--green);
+    color: var(--white);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content {
+    margin-left: 270px;
+    width: calc(100% - 270px);
+    padding: 30px;
+}
+
+.content-header {
+    background: var(--green);
+    color: var(--white);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: var(--black);
+}
+
+.card p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Table Styling */
+.table {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
+    width: 100%; /* Make sure the table takes up full width */
+}
+
+/* Table Header Styling */
+.table thead {
+    background-color: var(--header-bg); /* Apply uniform background color to entire header */
+}
+
+.table th, .table td {
+    color: var(--black); /* Text color for both header and body */
+    text-align: center;
+    padding: 15px;
+    vertical-align: middle;
+    border: 1px solid #ddd; /* Add border for both header and body */
+}
+
+/* Table Header Text Styling */
+.table th {
+    color: var(--header-text); /* White text color for header */
+    font-weight: bold;
+}
+
+/* Remove background color for the first column (with #) */
+.table th:first-child {
+    background-color: transparent; /* Normal background for # column */
+}
+
+.table{
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .content {
+        margin-left: 0;
+    }
+}
