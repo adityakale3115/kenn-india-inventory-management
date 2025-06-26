@@ -2,7 +2,7 @@
 
 A user-friendly Inventory Management System built for Kenn India to manage products, categories, stock, suppliers, and users through a secure and centralized dashboard.
 
-![Dashboard Screenshot](assets/ss.png)
+![Dashboard Screenshot](asset/ss.png)
 
 ## Features
 
@@ -48,7 +48,7 @@ A user-friendly Inventory Management System built for Kenn India to manage produ
 
 ## Screenshot
 
-![Dashboard](assets/ss.png)
+![Dashboard](asset/ss.png)
 
 ## Future Enhancements
 
